@@ -1,0 +1,14 @@
+#draw {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#draw div {
+  display: inline-block;
+  border: 1px solid black;
+  margin-top: -5px;
+}
+
+.active {
+  background: #000;
+}
