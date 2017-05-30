@@ -1,14 +1,21 @@
 #draw {
-  width: 400px;
+  width: 400px; height: 402px;
   margin-left: auto;
   margin-right: auto;
-}
-#draw div {
-  display: inline-block;
-  border: 1px solid black;
-  margin-top: -5px;
+  font-size: 0;
 }
 
-.active {
+.pix{
+  display: inline-grid;
+  border: 1px solid black;
+}
+
+.pix:hover {
   background: #000;
+}
+.transition {
+  transition: 0s 99999s;
+}
+.transition:hover {
+  transition: 1s;
 }

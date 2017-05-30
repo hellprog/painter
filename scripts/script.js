@@ -1,18 +1,22 @@
 $(document).ready(function() {
+  var counter=0;
   var createDiv= function(number) {
     for (var i = 0; i < Math.pow(number, 2); i++) {
-      $('#draw').prepend('<div></div>');
+      $('#draw').prepend('<div class="pix"></div>');
   };
-  $('#draw div').css("height", (400/number-3)+"px");
-  $('#draw div').css("width", (400/number-3)+"px");
+  $('.pix').css("height", (400/number-2)+"px");
+  $('.pix').css("width", (400/number-2)+"px");
 };
   createDiv(16);
   $('button').click(function(){
-    $('#draw div').remove();
+    $('.pix').remove();
     var res=prompt("Введите размерность поля");
     createDiv(res);
-  })
-  $('#draw div').hover(function(){
-    $(this).addClass('active');
+    $('.pix').mouseenter(function(){
+      $(this).addClass('transition');
   });
+  });
+  $('.pix').mouseenter(function(){
+    $(this).addClass('transition');
+});
 });
